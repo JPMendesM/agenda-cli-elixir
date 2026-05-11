@@ -13,15 +13,11 @@ defmodule AgendaCli.Contacts do
   end
 
   def delete(contacts, id) do
-    Enum.reject(contacts, fn contact ->
-      contact["id"] == id
-    end)
+    Enum.reject(contacts, fn contact -> contact["id"] == id end)
   end
 
   def find_by_id(contact, id) do
-    Enum.find(contact, fn contact ->
-      contact["id"] == id
-    end)
+    Enum.find(contact, fn contact -> contact["id"] == id end)
   end
 
   def edit(contacts, id, updates) do
